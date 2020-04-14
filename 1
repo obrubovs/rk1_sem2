@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    char a, c;
+    a = getchar();
+    putchar(a);
+    while ((c = getchar()) != EOF) {
+        if (a !='D') {
+            putchar(c);
+            a = c;
+        }
+        else {
+            a = c;
+        }
+    }
+
+    return 0;
+}
