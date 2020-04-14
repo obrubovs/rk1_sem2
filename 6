@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main()
+{ int c, A[128], i, max, n;
+for (i = 0; i < 128; ++i)
+A[i] = 0;
+max = 0;
+
+while ((c = getchar()) != EOF)
+{
+++A[c];
+}
+for (i = 0; i < 128; ++i)
+{
+if (A[i] > max)
+{
+max = A[i];
+n = i;
+}
+}
+putchar(n);
+return 0;
+}
