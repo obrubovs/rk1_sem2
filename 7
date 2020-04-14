@@ -1,0 +1,40 @@
+#include <stdio.h>
+int main() {
+char a[100], c;
+int i=0, s=0;
+c=getchar();
+while(c!=EOF) {
+a[i]=c;
+i++;
+c=getchar();
+}
+
+a[i]='\0';
+i=0;
+
+while(a[i]!='\0') {
+if(s%2==0) {
+while(a[i]!='\n') {
+if ((a[i]>=65)&&(a[i]<=90)) {
+a[i]=a[i]+32;
+}
+putchar(a[i]);
+i++;
+}
+printf("%\n");
+}
+else {
+while(a[i]!='\n') {
+if ((a[i]>=97)&&(a[i]<=122)) {
+a[i]=a[i]-32;
+}
+putchar(a[i]);
+i++;
+}
+printf("%\n");
+}
+s++;
+i++;
+}
+return 0;
+}
