@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+#define MAXSIZE 1000
+int main() {
+	char s1[MAXSIZE];
+	int i = 0, c, sum = 0;
+	c = getchar();
+	while (c != EOF) {
+		if ((c >= '0' && c <= '9') || c=='\n') {
+			s1[i] = c;
+			i++;
+		}
+		c = getchar();
+	}s1[i] = '\0';
+	for (int k = 0; k < i-1; k++) {
+		if (s1[k] == '\n') {
+			printf("%d\n", sum);
+			sum = 0;
+
+		}
+		else {
+			sum = sum + (s1[k] - '0');
+		}
+	}
+	printf("%d", sum);
+
+}
