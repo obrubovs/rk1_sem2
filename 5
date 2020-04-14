@@ -1,0 +1,31 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#define MAX 100
+#define IN 1
+#define OUT 0
+
+int main()
+{
+	int i = 0, k = 0, j = 0;
+	char str[MAX], c;
+	c = getchar();
+	while (c != EOF) {
+		str[i] = c;
+		i++;
+		c = getchar();
+	}
+
+		str[i] = '\0';
+		for (k = 0; k < i; k++) {
+			if (str[k] == '/' && str[k + 1] == '/') {
+				j = IN;
+			}
+			if (str[k] == '\n') {
+				j = OUT;
+			}
+			if (j == OUT) {
+				printf("%c", str[k]);
+			}
+		}
+
+	}
