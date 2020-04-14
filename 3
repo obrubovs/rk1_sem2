@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+int main() {
+    int b, i, c;
+    b = i = 0;
+    char str[200];
+    while ((c = getchar()) !=EOF) {
+        str[i] = c;
+        i++;
+    }
+    str[i] = '\0';
+
+    for(i =0;str[i] !='\0';i++) {
+        if(((str[i] == 'a') && (str[i + 1] == ' ')) || (str[i+1] == '\n')){
+            b++;
+
+        }
+    }
+    printf("%d", b);
+
+return 0;
+}
