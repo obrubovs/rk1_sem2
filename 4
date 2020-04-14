@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    char str[120];
+    int p = 0;
+    char c;
+    int q;
+
+    q = 0;
+    c = getchar();
+
+    while (c != EOF) {
+        str[p] = c;
+        p++;
+        c = getchar();
+    }
+    str[p] = '\0';
+
+    for (int i = 0; i < p; i++)
+    {
+        if ((str[i] == 'a') && ((str[i + 1] == 'b'))) {
+            q++;
+        }
+    }
+    printf("%d", q);
+
+    return 0;
+}
